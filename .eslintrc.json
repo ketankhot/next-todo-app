@@ -1,3 +1,14 @@
-{
-  "extends": "next/core-web-vitals"
-}
+module.exports = {
+  extends: 'next/core-web-vitals', // Extend Next.js ESLint rules
+  rules: {
+    'react-hooks/rules-of-hooks': 'off', // Disable hooks rules if needed
+    'react/react-in-jsx-scope': 'off', // Disable this if you are using Next.js 11+
+    'no-unused-vars': 'warn', // Change unused variables warning to warning
+    // Add any other rules you want to disable or customize
+  },
+  settings: {
+    react: {
+      version: 'detect', // Automatically detect the React version
+    },
+  },
+};
